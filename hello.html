@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Genie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome-screen">Trip Genie Welcomes You</div>
+    <div id="destinations-tab-content">
+        <ul id="destination-list"></ul> <!-- List for destinations -->
+    </div>
+    <div id="loading-screen" style="display: none;">
+        <h2>Loading...</h2>
+        <p>Please wait while we fetch your data.</p>    
+    </div>
+    <div id="error-screen" style="display: none;">
+        <h2>Error</h2>
+        <p>Something went wrong. Please try again later.</p>
+    </div>
+    <div id="preferences" class="tab-content" style="display: none;">
+        <h2>Preferences</h2>
+        <form id="preferences-form">
+            <label><input type="checkbox" name="preferences" value="adventurous"> Adventurous</label><br>
+            <label><input type="checkbox" name="preferences" value="heritage sites"> Heritage Sites</label><br>
+            <label><input type="checkbox" name="preferences" value="cultural sites"> Cultural Sites</label><br>
+            <label><input type="checkbox" name="preferences" value="parks"> Parks</label><br>
+            <label><input type="checkbox" name="preferences" value="malls"> Malls</label><br>
+            <label><input type="checkbox" name="preferences" value="streets"> Streets</label><br>
+            <label><input type="checkbox" name="preferences" value="markets"> Markets</label><br>
+            <button type="button" id="save-preferences">Save Preferences</button>
+        </form>
+    </div>
+    <div id="main-content" style="display: none;">
+    
+        <header>
+            <h1>Trip Genie</h1>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="#" class="tab-link" data-tab="home">Home</a></li>
+                <li><a href="#" class="tab-link" data-tab="trip-planning">Trip Planning</a></li>
+                <li><a href="#" class="tab-link" data-tab="booking">Booking</a></li>
+                <li><a href="#" class="tab-link" data-tab="profile">Profile</a></li>
+                <li><a href="#" class="tab-link" data-tab="destinations">Destinations</a></li> <!-- Destinations tab -->
+                <li><a href="#" class="tab-link" data-tab="preferences">Preferences</a></li>  <!-- New Preferences Tab -->
+            </ul>
+        </nav>
+
+        <!-- Tab Content -->
+        <section id="home" class="tab-content">
+            <h2>Find Your Next Destination</h2>
+            <input type="text" placeholder="Enter destination..." id="search-bar">
+            <button id="search-btn">Search</button>
+            <div id="search-results"></div> <!-- Search results will be displayed here -->
+            <p>Explore the world with Trip Genie. Discover new places, plan your trips, and book your adventures.</p>
+        </section>
+        <section id="destinations" class="tab-content" style="display: none;">
+            <h2>Available Destinations</h2>
+            <ul id="destinations-list"></ul> <!-- List will be populated dynamically -->
+        </section>
+        <section id="trip-planning" class="tab-content" style="display: none;">
+            <h2>AI-Generated Itinerary</h2>
+            <p>Your customized travel plan will appear here.</p>
+        </section>
+
+        <section id="booking" class="tab-content" style="display: none;">
+            <h2>Book Your Trip</h2>
+            <p>Flights, hotels, and transport recommendations.</p>
+        </section>
+
+        <section id="profile" class="tab-content" style="display: none;">
+            <h2>Your Profile</h2>
+            <p>View saved trips & user preferences.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Trip Genie. All Rights Reserved.</p>
+    </footer>
+   
+    <script src="script.js"></script>
+</body>
+</html>
